@@ -1,8 +1,8 @@
 # AI 转 Word 助手 (AI to Word)
 
-> 把 AI 回复一键复制成 **Word/WPS 友好格式** 的浏览器扩展。
+> 把 AI 回复一键复制成 **Word 友好格式(兼容 WPS)** 的浏览器扩展。
 
-在 **DeepSeek / ChatGPT / 豆包 / Kimi** 等 AI 网页上选中回复内容,一键复制为 Word/WPS 友好格式 ——
+在 **DeepSeek / ChatGPT / 豆包 / Kimi** 等 AI 网页上选中回复内容,一键复制为 Word 友好格式 ——
 标题、列表、表格、加粗、代码块全部保留,粘贴进 Word 就是整齐排版,不用再手动清理 `#`、`*`、`|` 等 Markdown 符号。
 
 ![license](https://img.shields.io/badge/license-MIT-blue) ![version](https://img.shields.io/badge/version-0.1.0-green) ![MV3](https://img.shields.io/badge/Manifest-V3-orange)
@@ -11,7 +11,7 @@
 
 - **选区即转**:只转换你选中的内容,不影响页面其他部分
 - **格式保真**:标题层级、无序/有序列表、表格、加粗、斜体、行内代码、代码块、引用、链接全部保留
-- **双通道剪贴板**:同时写入 HTML 与纯文本,兼容 Word / WPS / 记事本
+- **双通道剪贴板**:同时写入 HTML 与纯文本,兼容 Word / 记事本
 - **智能降级**:纯文本场景自动回退为 Markdown 解析
 - **右键菜单**:选中内容 → 右键 →「复制为 Word 格式」
 - **本地运行**:无服务器、无外部依赖、不收集任何用户数据
@@ -25,7 +25,7 @@ DeepSeek · ChatGPT · 豆包 · Kimi · 通义千问 · 文心一言 · Gemini 
 1. 安装插件(见下方「安装」)
 2. 打开任一支持的 AI 网站,让 AI 生成内容
 3. **选中**回复内容 → 点击出现的 **「📋 复制为 Word 格式」** 按钮
-4. 打开 Word / WPS,**Ctrl+V** 粘贴 → 完成
+4. 打开 Word(或 WPS),**Ctrl+V** 粘贴 → 完成
 
 > 也可以:选中内容后右键 →「复制为 Word 格式」
 
@@ -44,6 +44,11 @@ DeepSeek · ChatGPT · 豆包 · Kimi · 通义千问 · 文心一言 · Gemini 
 3. 打开右上角「开发者模式」
 4. 点「加载已解压的扩展程序」,选择本文件夹
 5. 完成,去 AI 网站试试吧
+
+## 已测试环境
+
+- **Microsoft Word**:已在真实环境验证(选区复制 → 粘贴,标题/列表/表格/加粗/代码块保真)
+- **WPS Office**:尚未实测(基于标准 HTML 剪贴板预期可用,待验证)
 
 ## 为什么做这个
 
