@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "AI 转 Word 助手 (AI to Word)",
+  "version": "0.1.0",
+  "description": "在 DeepSeek / ChatGPT / 豆包 / Kimi 等 AI 网页上选中回复内容，一键复制为 Word/WPS 友好格式：标题、列表、表格、加粗全保留，粘贴即整齐排版。",
+  "permissions": ["storage", "contextMenus", "clipboardWrite", "clipboardRead"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.deepseek.com/*",
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://www.doubao.com/*",
+        "https://kimi.moonshot.cn/*",
+        "https://tongyi.aliyun.com/*",
+        "https://chat.qwen.ai/*",
+        "https://yiyan.baidu.com/*",
+        "https://gemini.google.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["md2html.js", "content.js"],
+      "run_at": "document_idle",
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI 转 Word 助手"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
